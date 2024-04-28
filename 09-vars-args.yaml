@@ -1,0 +1,8 @@
+# WE CAN GIVE ARGS FROM OUTSIDE
+#
+- name: variables from args
+  hosts: localhost
+  tasks:
+  - name: get from args
+    ansible.builtin.debug:
+     msg: "hello {{PERSON}}, good {{WISHES}}"
