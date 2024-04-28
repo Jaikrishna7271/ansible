@@ -5,7 +5,7 @@
    Trainer: "siva"
    Duration: "150hrs"
   tasks:
-  - name: print override info
+  - name: print override info #task level varible
     vars:
      Course: "ansible"
      Trainer: "sivakumar"
@@ -13,6 +13,6 @@
     ansible.builtin.debug:
      msg: "hi, we are learning {{Course}} from Trainer {{Trainer}}, duration is {{Duration}}"
 
-  - name: print info #it is not override because it takes main variable
+  - name: print info #it is not override because it is play level variable
     ansible.builtin.debug:
      msg: "hi, we are learning {{Course}} from Trainer {{Trainer}}, duration is {{Duration}}"
