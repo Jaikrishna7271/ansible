@@ -5,10 +5,14 @@
    Trainer: "siva"
    Duration: "150hrs"
   tasks:
-  - name: print info
+  - name: print override info
     vars:
      Course: "ansible"
      Trainer: "sivakumar"
      Duration: "15hrs"
+    ansible.builtin.debug:
+     msg: "hi, we are learning {{Course}} from Trainer {{Trainer}}, duration is {{Duration}}"
+
+  - name: print info #it is not override because it takes main variable
     ansible.builtin.debug:
      msg: "hi, we are learning {{Course}} from Trainer {{Trainer}}, duration is {{Duration}}"
