@@ -9,7 +9,7 @@
     prompt: pls enter ur wishes
     private: false
   tasks:
-  - name: check preference
+  - name: check preferences
     vars:
     wishes: "morning from task variable"
     ansible.builtin.debug:
