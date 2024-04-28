@@ -1,5 +1,6 @@
 # WE CAN GIVE ARGS FROM OUTSIDE
-#
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-args.yaml -e "PERSON=JAI WISHES=MORNING"
+
 - name: variables from args
   hosts: localhost
   tasks:
