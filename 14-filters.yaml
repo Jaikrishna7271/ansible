@@ -44,16 +44,16 @@
 - name: convert dictionary or map or keyvalue pair into items/list
   hosts: localhost
   vars:
-   my_dict:
-   Course: ansible
-   Trainer: siva
-   Duration: 10hrs
+    my_dict: #map or dictionary
+      Course: ansible
+      Trainer: siva
+      Duration: 10hrs
   tasks:
   - name: before convert
     ansible.builtin.debug:
-     msg: "before convert: {{ my_dict }}"
+      msg: "before convert: {{ my_dict }}"
   - name: after convert
     ansible.builtin.debug:
-     msg: "after convert: {{ my_dict | dict2items }}"
+      msg: "after convert: {{ my_dict | dict2items }}"
 
 
